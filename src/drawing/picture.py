@@ -88,7 +88,7 @@ class Picture:
         #else:
         #    pygame.image.save(self._surface, f)
 
-        pygame.image.save(self._surface, os.path.normpath(f))
+        pygame.image.save(self._surface, f)
 
     #-------------------------------------------------------------------
 
