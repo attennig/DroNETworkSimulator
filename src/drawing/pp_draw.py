@@ -2,7 +2,7 @@ from src.drawing import stddraw
 from src.entities.uav_entities import Environment
 from src.utilities import config, utilities
 from collections import defaultdict
-import os
+
 #printer the environment 
 class PathPlanningDrawer():
 
@@ -32,7 +32,7 @@ class PathPlanningDrawer():
 
     def save(self, filename):
         """ save the current plot """
-        stddraw.save(os.path.normpath(filename))
+        stddraw.save(filename)
 
     def __borders_plot(self):
         stddraw.setPenColor(c=stddraw.RED)
@@ -96,7 +96,7 @@ class PathPlanningDrawer():
             stddraw.show(rate)
         if save:
             assert(filename is not None)
-            self.save(os.path.normpath(filename))
+            self.save(filename)
         stddraw.clear()
         
     def draw_event(self, event):

@@ -549,7 +549,7 @@ def save(f):
     #else:
     #    pygame.image.save(_surface, f)
 
-    pygame.image.save(_surface, os.path.normpath(f))
+    pygame.image.save(_surface, f)
 
 #-----------------------------------------------------------------------
 
@@ -633,7 +633,7 @@ def _saveToFile():
         return
 
     try:
-        save(os.path.normpath(fileName))
+        save(fileName)
         childProcess = subprocess.Popen(
             [sys.executable, stddrawPath, 'confirmFileSave'])
     except (pygame.error) as e:
